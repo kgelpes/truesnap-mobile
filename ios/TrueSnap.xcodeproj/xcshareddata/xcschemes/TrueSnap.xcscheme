@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "reactnativeexpostarter.app"
-               BlueprintName = "reactnativeexpostarter"
-               ReferencedContainer = "container:reactnativeexpostarter.xcodeproj">
+               BuildableName = "TrueSnap.app"
+               BlueprintName = "TrueSnap"
+               ReferencedContainer = "container:TrueSnap.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "reactnativeexpostarterTests.xctest"
-               BlueprintName = "reactnativeexpostarterTests"
-               ReferencedContainer = "container:reactnativeexpostarter.xcodeproj">
+               BuildableName = "TrueSnapTests.xctest"
+               BlueprintName = "TrueSnapTests"
+               ReferencedContainer = "container:TrueSnap.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "reactnativeexpostarter.app"
-            BlueprintName = "reactnativeexpostarter"
-            ReferencedContainer = "container:reactnativeexpostarter.xcodeproj">
+            BuildableName = "TrueSnap.app"
+            BlueprintName = "TrueSnap"
+            ReferencedContainer = "container:TrueSnap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "reactnativeexpostarter.app"
-            BlueprintName = "reactnativeexpostarter"
-            ReferencedContainer = "container:reactnativeexpostarter.xcodeproj">
+            BuildableName = "TrueSnap.app"
+            BlueprintName = "TrueSnap"
+            ReferencedContainer = "container:TrueSnap.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

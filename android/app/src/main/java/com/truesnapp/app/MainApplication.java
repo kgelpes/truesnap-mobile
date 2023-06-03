@@ -1,4 +1,4 @@
-package com.reactnative.example;
+package com.truesnapp.app;
 
 import android.app.Application;
 import android.content.res.Configuration;

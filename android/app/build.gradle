@@ -113,9 +113,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.reactnative.example'
+    namespace 'com.truesnapp.app'
     defaultConfig {
-        applicationId 'com.reactnative.example'
+        applicationId 'com.truesnapp.app'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
