@@ -31,6 +31,7 @@ import Reanimated, {
 } from "react-native-reanimated";
 import { MAX_ZOOM_FACTOR } from "../Constants";
 import Stack from "../components/Stack";
+import * as FileSystem from "expo-file-system";
 
 const ReanimatedCamera = Reanimated.createAnimatedComponent(Camera);
 Reanimated.addWhitelistedNativeProps({
@@ -137,13 +138,29 @@ export default function App() {
     console.log("Camera initialized!");
     setIsCameraInitialized(true);
   }, []);
-  const onMediaCaptured = useCallback((media: PhotoFile, type: "photo") => {
-    console.log(`Media captured! ${JSON.stringify(media)}`);
-    // navigation.navigate("MediaPage", {
-    //   path: media.path,
-    //   type: type,
-    // });
+
+  const onPhotoCaptured = useCallback(async () => {
+    if (camera.current) {
+      const timestamp = new Date().getTime();
+
+      const photo = await camera.current.takePhoto();
+
+      const photoPath = `${FileSystem.documentDirectory}photo-${timestamp}.jpeg`;
+      await FileSystem.copyAsync({
+        from: `file:/${photo.path}`,
+        to: photoPath,
+      });
+
+      const photoAsString = await FileSystem.readAsStringAsync(photoPath, {
+        encoding: FileSystem.EncodingType.Base64,
+      });
+
+      console.log("photo as string", photoAsString);
+    } else {
+      console.log("camera not initialized");
+    }
   }, []);
+
   const onFlipCameraPressed = useCallback(() => {
     setCameraPosition((p) => (p === "back" ? "front" : "back"));
   }, []);
@@ -306,7 +323,8 @@ export default function App() {
         <TouchableOpacity onPress={() => console.log("gallery")}>
           <Ionicons name="images-outline" size={24} color="white" />
         </TouchableOpacity>
-        <CircleButton onPress={() => console.log(device.neutralZoom)} />
+
+        <CircleButton onPress={onPhotoCaptured} />
 
         <TouchableOpacity
           onPress={onFlipCameraPressed}
